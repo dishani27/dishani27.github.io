@@ -1,0 +1,1341 @@
+body{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a{
+   text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-top:0px;
+}
+
+.row{
+    display: flex;
+}
+
+.container{
+    margin: 0px auto;
+    width: 100%;
+}
+#container{
+    overflow: hidden;
+}
+
+/* header */
+#header{
+    background-color: #232323;
+    padding: 9px 0px;  
+}
+
+#header a{
+    color: #ffffff;
+}
+#header .row{
+    justify-content: space-between;
+    padding-right: 4%;
+    position: relative;
+}
+#header .container .row .logo a h1{
+    margin-bottom: 0px;
+    /* position: absolute; */
+}
+#header .container .row .logo a{
+    background-color: #da9d40;
+    display: block; 
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    /* padding: 34px 247px 10px; */
+}
+#header .container #main_nav ul{
+    text-align: center;
+    padding: 20px 0px;
+}
+#header .container #main_nav ul li
+{
+    display: inline-block;
+    position: relative;   
+    margin: 0px 10px;
+}
+
+/* hover */
+#header .container #main_nav ul li:after{
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #da9d40;
+    top: 24px;
+    left: 0px;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s;
+}
+#header .container #main_nav ul li:hover:after{
+    opacity: 1;
+}
+
+#header .container .user_section ul{
+    padding: 9px 0px;  
+}
+#header .container .user_section ul li{
+    display: inline-block;
+}
+
+#header .container .user_section ul li a{
+    border: 1px dashed white;   
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+#header .container .user_section ul li a:hover{
+    border-radius: 50% 50%;
+    /* color:royalblue;    */
+    /* border-color: royalblue  */
+}
+#header .container .user_section ul li .fb:hover{
+    color: royalblue;
+    border-color: royalblue;
+}
+#header .container .user_section ul li .tw:hover{
+    color: lightskyblue;
+    border-color: lightskyblue;
+}
+#header .container .user_section ul li .in:hover{
+    color: #833AA6;
+    border-color: #833AA6;
+}
+#header .container .user_section ul li .go:hover{
+    color: #DD4B39;
+    border-color: #DD4B39;
+}
+#header .container .user_section ul li a i{
+    font-size: 15px;
+    padding: 0px 3px;
+}
+
+/* banner */
+
+#banner .container_b .row{
+    width: 500%;
+    animation: 15s banner infinite linear;
+    margin: 1px 0px;
+}
+#banner .container_b .row .slide{
+    width: 20%;
+    display: inline-block;
+    position: relative;
+}
+#banner .container_b .row .slide img{
+    max-height: 48vw;
+    width: 100%;
+    
+}
+
+@keyframes banner{
+    0%,18%{
+        transform: translateX(0%);
+    }
+    20%,38%{
+        transform: translateX(-20%);
+    }
+    40%,58%{
+        transform: translateX(-40%);
+    }
+    60%,78%{
+        transform: translateX(-60%);
+    }
+    80%,100%{
+        transform: translateX(-80%);
+    }
+}
+
+#banner .container_b .row .slide figcaption{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 99%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#banner .container_b .row .slide figcaption span{
+    position: absolute;
+    top: 45%;
+    left: 0px;
+    width: 100%;
+}
+
+/* about section */
+
+#about{
+    padding: 130px 0px 70px 0px;
+}
+#about .container h2 {
+    font-size: 45px;
+    
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 35px;
+}
+#about .container{
+    padding-bottom: 5%;
+}
+#about .container h2:after{
+    content: "";
+    position: absolute;
+    bottom: 1%;
+    left: 45%;
+    width: 10%;
+    border-bottom: 3px solid #da9d40;
+    opacity: 1;
+
+}
+#about .container .row{
+    position: relative;
+}
+#about .container .row .image{
+    margin-left: 3%;
+    flex:1;
+}
+#about .container .row .image img{
+    height: 36vw;
+    width: 100%;
+    border-radius: 5%;
+    transition: 0.4s;
+    
+}
+#about .container .row .image img:hover{
+transform: scale(1.1,1.1);
+}
+#about .container .row .desc{
+    margin: 0% 4% 0% 3%;
+    flex: 2;
+}
+#about .container .row .desc h3 span{
+    text-transform: uppercase;
+    color: #da9d40;
+    font-size: 33px;
+    font-weight: 600;
+}
+
+#about .container .row .desc h3{
+    color: #353535;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+#about .container .row .desc p{
+    text-transform: capitalize;
+    color: #212121;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+#about .container .row .desc hr{
+    border-top: 1px dashed #232323;
+    color: transparent;
+}
+
+#about .container .row .read{
+    position: absolute;
+    bottom: 1%;
+    left: 36%;
+    font-size: 15px;
+    padding: 8px 32px;
+    color: #ffffff;
+    background-color: #413C34;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.8px;
+
+}
+#about .container .row .read:hover{
+    background-color: #da9d40;
+}
+#about .container .row .contact{
+    position: absolute;
+    bottom: 1%;
+    left: 49%;
+    font-size: 15px;
+    padding: 8px 32px;
+    color: #ffffff;
+    background-color: #da9d40;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.8px;
+
+}
+#about .container .row .contact:hover{
+    background-color: #413C34;
+}
+
+/* services */
+
+#services {
+   background: url("../1 Images/7.jpg") no-repeat center fixed;
+   width: 100%;
+   padding-top: 66px;
+   
+}
+#services .container  h3{
+    
+    color: #ffffff;
+    font-size: 45px;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+}
+#services .container  h3:after{
+content: "";
+position: absolute;
+bottom: 0px;
+left: 45%;
+width: 10%;
+border-bottom: 3px solid #da9d40;
+opacity: 1;
+}
+#services .container .row {
+    justify-content: space-between;
+    margin: 0px 15px;
+}
+#services .container .row .service{
+    background-color: #ffffff;
+    margin: 0% 2% 10%;
+    padding: 3%;
+    flex: 1;
+   
+}
+#services .container .row .service button{
+    background-color: #da9d40;
+    border: none;
+    margin-bottom: 20px;
+}
+#services .container .row .service button i{
+    color: white;
+    padding: 15px 20px;
+    font-size: 25px;
+}
+#services .container .row .service:hover button{
+    background-color: #413C34;
+    transition: 0.4s;
+}
+#services .container .row .service p{
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+}
+#services .container .row .service span{
+    font-size: 23px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+/* pricing */
+#pricing .container{
+    padding-top: 7%;
+}
+#pricing .container  h3{
+    font-size: 45px;
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+}
+#pricing .container  h3:after{
+content: "";
+position: absolute;
+bottom: -9%;
+left: 42.5%;
+width: 15%;
+border-bottom: 3px solid #da9d40;
+opacity: 1;
+}
+
+#pricing .container .row{
+    justify-content: space-between;
+    padding: 2% 7% 10%;
+}
+#pricing .container .row .col .image{
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+#pricing .container .row .col .image img{
+    width: 100%;
+}
+#pricing .container .row .col .image .caption_1{
+position: absolute;
+top: 0px;
+left: 0px;
+font-size: 16px;
+width: 35%;
+background-color: #413C34;
+color: #ffffff;
+padding: 7px 15px;
+border-radius: 0% 41% 36% 0%;
+}
+#pricing .container .row .col .image .caption_2{
+    position: absolute;
+    top: -30px;
+    left: 150px;
+    text-align: center;
+    background-color: #da9d40;
+    padding: 10px 20px 15px;
+    border-radius: 50%;
+    font-size: 14px;
+
+}
+
+#pricing .container .row .col{
+    border: 1px solid #dedede;
+    margin: 3% 2%;
+    transition: 0.4s;
+    position: relative;
+    flex: 1;
+}
+#pricing .container .row .col:hover{
+    transform: scale(1.1,1.1);
+}
+
+#pricing .container .row .col .desc{
+    text-align: center;
+}
+
+#pricing .container .row .col .desc hr{
+    width: 80%;
+    background-color: #cecece;
+    border: none;
+    height: 1px;
+}
+#pricing .container .row .col .desc ul li{
+    font-weight: 600;
+    font-size: 15px;
+    margin: 10px 0px;
+}
+#pricing .container .row .col button{
+    background-color: #413C34;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin: 30px 0px;
+}
+#pricing .container .row .col button span{
+    text-transform: uppercase;    
+    font-size: 14px;
+}
+#pricing .container .row .col button:hover{
+    background-color: #da9d40;
+    cursor: pointer;
+}
+#pricing .container .row .col .wrapper{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+/* gallery */
+#gallery .container{
+    margin-bottom: 8%;
+}
+#gallery .container h3{
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    margin-bottom: 55px;
+    font-weight: 300;
+}
+#gallery .container  h3:after{
+    content: "";
+    position: absolute;
+    bottom: 1%;
+    left: 46%;
+    width: 7%;
+    border-bottom: 3px solid #da9d40;
+    opacity: 1;
+ }
+ #gallery .container .row{
+     /* justify-content: space-evenly; */
+     margin: 0% 8% 1%;
+     
+ }
+ 
+ #gallery .container .row .image{
+     /* display: flex; */
+    position: relative;
+    overflow: hidden;
+    margin: 0% 1%;
+    width: 30%;
+    cursor: pointer;
+    flex: 1;
+ }
+ #gallery .container .row .image img{
+    max-width: 100%;
+    height: 21vw;
+ }
+
+  #gallery .container .row .image .caption{
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     color: #ffffff;
+     background-color: rgba(0,0,0,0.4);
+     width: 100%;
+     height: 100%;
+     font-size: 30px;
+     text-align: center;
+     transition: 0.4s;
+     transform: translate(0%,100%);
+ }
+
+ #gallery .container .row .image:hover .caption{
+    transform: translate(0%,0%);
+ }
+
+ #gallery .container .row .image .caption span{
+     position: absolute;
+     top: 45%;
+     width: 100%;
+     left: 0px;
+ } 
+
+ /* team */
+#team{
+    background: url("../1 Images/22.png") no-repeat left #dad8d8;
+    background-size: cover;
+ 
+}
+#team .container{
+    padding: 7% 0%;   
+}
+#team .container h3{
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    margin-bottom: 5%;
+    color: #ffffff;
+    font-weight: 300;
+}
+#team .container  h3:after{
+    content: "";
+    position: absolute;
+    bottom: 1%;
+    left: 42%;
+    width:16%;
+    border-bottom: 3px solid #da9d40;
+    opacity: 1;
+}
+#team .container .row{
+    /* justify-content: flex-end; */
+    padding: 0% 5%;
+}
+#team .container .row .section {
+    flex: 1;
+    margin-left: 7%;
+}
+#team .container .row .section .side{
+    display: flex;
+}
+#team .container .row .section .side .image{
+    /* display: flex; */
+    /* margin: -1px; */
+    /* width: 40%; */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -1%;
+    /* flex: 1; */
+}
+#team .container .row .section .side .image:hover figcaption{
+    transform: translate(0%,0%);
+}
+#team .container .row .section .side .image figcaption{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(218, 157, 64, 0.59);
+    text-align: center;
+    transform: translate(0%,-100%);
+    transition: 0.5s ease-in-out;
+}
+#team .container .row .section .side .image figcaption span{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 0px;
+}
+#team .container .row .section .side .image figcaption .user_section ul{
+    /* padding: 9px 0px;   */
+}
+#team .container .row .section .side .image figcaption .user_section ul li{
+    display: inline-block;
+}
+
+#team .container .row .section .side .image figcaption .user_section ul li a{
+    border: 2px dotted white;   
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+#team .container .row .section .side .image figcaption .user_section ul li a:hover{
+    border-radius: 50% 50%;
+    /* color:royalblue;    */
+    /* border-color: royalblue;  */
+}
+
+#team .container .row .section .side .image figcaption .user_section ul li a i{
+    font-size: 14px;
+    padding: 0px 3px;
+    color: white;
+}
+
+
+#team .container .row .desc{
+    color: white;
+    /* margin: 0px 250px 0px 110px; */
+    flex: 1;
+}
+#team .container .row .desc h4{
+    font-size: 35px;
+}
+#team .container .row .desc p{
+    font-size: 18px;
+    line-height: 25px;
+   letter-spacing: 1px;
+}
+
+/* contact */
+
+#contact .container{
+    padding: 6% 7%;
+}
+#contact .container h3{
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    margin-bottom: 5%;
+    font-weight: 300;
+}
+#contact  .container  h3:after{
+    content: "";
+    position: absolute;
+    bottom: 1%;
+    left: 43%;
+    width:13%;
+    border-bottom: 3px solid #da9d40;
+    opacity: 1;
+}
+#contact  .container .row{
+    /* justify-content: flex-start; */
+}
+#contact  .container .row .form {
+    flex: 1;
+}
+#contact  .container .row .form input{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+#contact  .container .row .form textarea{
+    width: 100%;
+    font-size: 18px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#contact  .container .row .form button{
+    font-size: 15px;
+    padding: 10px 40px;
+    color: white;
+    background-color: #da9d40;
+    border: none;
+    cursor: pointer;
+}
+#contact  .container .row .form button:hover{
+    background-color: #413C34;
+}
+#contact .container .row .details{
+    flex: 1;
+    margin-left: 3%;
+}
+#contact  .container .details h4{
+    margin: 0px 0px 15px;
+}
+#contact  .container .details p{
+    display: inline-block;
+    margin: 0px 0px 15px;
+}
+#contact  .container .details i{
+    color: #da9d40;
+    margin-right: 10px;
+}
+
+/* footer */
+#footer .container{
+    width: 100%;
+}
+#footer .container .row{
+    /* justify-content: space-between; */
+    background-color: #212121;
+    padding: 5% 7%;
+}
+#footer .container .row .list h5{
+    color: #da9d40;
+    font-size: 20px;
+}
+#footer .container .row .list {
+    color: #ffffff;
+    font-size: 15px;
+    flex: 1;
+}
+#footer .container .row .list a{
+    color: #999;
+}
+#footer .container .row .list ul li{
+    line-height: 35px;
+    letter-spacing: 0.5px;
+}
+#footer .container .row .list ul li a{
+    color: white;
+}
+#footer .container .row .list ul li a:hover{
+    color: #da9d40;
+}
+#footer .container .row .list p{
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 5px;
+
+}
+#footer .container .row .list .big{
+    font-size: 33px;
+}
+#footer .container .row .list .space{
+    line-height: 28px;
+}
+#footer .container .row .list .hover:hover{
+    color: #da9d40;
+}
+
+
+
+/* Responsive */
+
+@media(max-width:1200px){
+    #about .container .row .read{
+        bottom: -8%;
+        left: 36%;
+        font-size: 14px;
+        padding: 8px 28px;
+    
+    }
+    #about .container .row .contact{
+        bottom: -8%;
+        left: 51%;
+        font-size: 14px;
+        padding: 8px 28px;
+    }
+    #services .container .row .service span{
+        font-size: 22px;
+    }
+    #services .container .row .service p{
+        font-size: 14px;
+    line-height: 23px;
+    }
+    #team .container .row .section .side .image{
+        width: 39%;
+        height: 21vw;
+    }
+    #team .container .row .section .side .image img{
+        max-width: 100%;
+    max-height: 100%;
+    }
+    #footer .container .row .list{
+        margin-right: 2%;
+    }
+    #footer .container .row .list ul li{
+        line-height: 30px;
+    }
+    #footer .container .row .list p{
+        display: inline-block;
+    /* margin-left: 10px; */
+    line-height: 16px;
+    margin: 0%;
+    margin-bottom: 10%;
+    }
+    #pricing .container .row .col .image .caption_1{
+        width: 38%;
+    }
+}
+
+/* list  */
+
+.btn{
+    position: absolute;
+    top: 26%;
+    left: 92.5%;
+    border: none;
+    height: 53%;
+    border: 1px solid white;
+    /* cursor: pointer; */
+    z-index: 100;
+    display: none;
+    /* display: block; */
+    PADDING: 5px 7px;
+    background: transparent;
+    transition: 0.1s;
+}
+
+input[value='checkbox']{
+    position: absolute;
+    top: 19%;
+    left: 92%;
+    height: 58%;
+    cursor: pointer;
+    width: 5%;
+    opacity: 0;
+    z-index: 101;
+}
+
+.btn .line{
+    display: block;
+    transition: 0.4s;
+    width: 21px;
+    background-color: white;
+    height: 3px;
+    margin-bottom: 4px;
+}
+
+
+
+.row input[value="checkbox"]:checked ~  #main_nav ul{
+    transform: translate(0%,0%);
+}
+.row input[value="checkbox"]:checked ~ .btn .line:nth-child(2){
+    opacity: 0;
+}
+.row input[value='checkbox']:checked ~ .btn .line:first-child{
+    transform: rotate(45deg);
+    margin-top: 6px;
+}
+.row input[value='checkbox']:checked ~ .btn .line:last-child{
+    transform: rotate(-45deg);
+    margin-top: -14px;
+}
+
+@media(min-width:993px){
+    .btn{
+        display: none;
+    }
+} 
+
+
+@media(max-width:992px){
+    
+    .user_section{
+        position: absolute;
+        left: 40%;
+    }
+    .btn{
+        display: block;
+    }
+    #main_nav ul{
+        display: none;
+        position: absolute;
+        display: block;
+        right: 0%;
+        top: 117%;
+        text-align: center;
+        width: 100%;
+        height: 106%;
+        background-color: rgba(0,0,0,0.7);
+        transform: translate(100%,0%);
+        transition: 0.5s;
+        z-index: 100;
+    }
+    #banner .container_b .row .slide figcaption span{
+        font-size: 34px;
+    }
+    #about .container .row .contact{
+        left: 54%;
+    }
+    #services .container .row .service button i{
+        padding: 11px 12px;
+        font-size: 21px;
+    }
+    #services .container .row .service p{
+        line-height: 18px;
+    }
+    #pricing .container .row .col .image .caption_1{
+        font-size: 13px;
+    }
+    #pricing .container .row .col .image .caption_2{
+        font-size: 12px;
+        left: 107px;
+    }
+    #pricing .container .row .col .desc ul li{
+        font-size: 13px;
+    }
+    #pricing .container .row .col button span{
+        font-size: 12px;
+    }
+    #gallery .container h3:after{
+        left: 45%;
+        width: 10%;
+    }
+    #gallery .container .row .image .caption span{
+        font-size: 23px;
+    }
+    #team .user_section{
+        left: 10%;
+    }
+    #team .container .row .section .side .image figcaption .user_section ul li a{
+        padding: 5px;
+    }
+        
+    
+}
+
+@media(max-width:768px){
+    #banner .container_b .row .slide figcaption span{
+        font-size: 30px;
+    }
+    #about .container .row{
+        display: block;
+    }
+    #about .container .row .image{
+        margin: 0% 3%;
+    }
+    #about .container .row .image img{
+        height: 38vw;
+        width: 85%;
+        border-radius: 2%;
+    }
+    #about .container h2:after{
+        left: 43%;
+    width: 14%;
+    }
+    #about .container .row .desc h3 span{
+        font-size: 32px;
+    }
+    #about .container .row .read{
+        left: 28%;
+    }
+    #about .container .row .contact{
+        left: 51%;
+    }
+    #services .container .row{
+        display: block;
+    padding-bottom: 3%;
+    }
+    #pricing .container .row .col .image .caption_2{
+        font-size: 11px;
+    left: 65px;
+    padding: 9px 16px 13px;
+    }
+    #pricing .container .row .col .image .caption_1{
+        font-size: 12px;
+        width: 41%;
+        padding: 7px 9px;
+    }
+    #team .container .row .desc p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #team .user_section{
+        left: 5%;
+    }
+    #team .container .row .section .side .image figcaption .user_section ul li a{
+        padding: 3px;
+    }
+    #contact .container h3{
+        margin-bottom: 8%;
+    }
+    #footer .container .row .list{
+        margin-right: 5%;
+    }
+    #footer .container .row .list ul li{
+        line-height: 24px;
+    }
+}
+
+@media(max-width:640px){
+    #header .user_section{
+        left: 46%;
+    }
+    #header input[value='checkbox']{
+        left: 91%;
+    }
+    #header .btn {
+        left: 90.5%;
+    }
+    #banner .container_b .row .slide figcaption span{
+        font-size: 27px;
+    }
+    #about .container h2:after{
+        left: 40%;
+        width: 21%;
+    }
+    #about .container .row .image img{
+        height: 47vw;
+    }
+    #about .container .row .desc h3 span{
+        font-size: 26px;
+    }
+    #about .container .row .desc h3{
+        font-size: 18px;
+    }
+    #about .container .row .desc p{
+        padding: 2%;
+    }
+    #about .container .row .read{
+        left: 22%;
+    }
+    #services .container h3:after{
+        left: 42%;
+        width: 20%;
+    }
+    #pricing .container h3:after{
+        left: 36%;
+        width: 30%;
+    }
+    #pricing .container .row{
+        display: block;
+            /* justify-content: space-between; */
+    }
+    #pricing .container .row .col{
+        margin: 10% auto;
+        width: 66%;
+    }
+    #pricing .container .row .col .image .caption_2{
+        font-size: 13px;
+        left: 131px;
+    }
+    #pricing .container .row .col .image .caption_1{
+        font-size: 15px;
+        width: 36%;
+    }
+    #gallery .container h3:after{
+        left: 41%;
+        width: 18%;
+    }
+    #gallery .container .row{
+        display: block;
+    }
+    #gallery .container .row .image{
+        margin: 2% auto;
+        width: 77%;
+    }
+    #gallery .container .row .image img{
+        height: 44vw;
+    }
+    #team .container .row{
+        display: block;
+    }
+    #team .container .row .section{
+        margin-top: 6%;
+    }
+    #team .container .row .section .side .image{
+        width: 40%;
+        height: 36vw;
+    }
+    #team .container .row .section .side .image img{
+        width: 100%;
+    height: 36vw;
+    }
+    #team .user_section{
+        left: 17%;
+    }
+    #team .container .row .section .side .image figcaption .user_section ul li a{
+        padding: 6px;
+    }
+    #team .container h3:after{
+        left: 32%;
+        width: 42%;
+    }
+    #contact .container h3:after{
+        left: 37%;
+        width: 27%;
+    }   
+    #contact .container .row{
+        display: block;
+    }
+    #contact .container .row .details{
+        margin-top: 8%;
+    }
+    #footer .container .row{
+        display: block;
+    }
+    #footer .container .row .list{
+        margin-bottom: 9%;
+        margin: 0% auto 9%;
+        text-align: center;
+    }
+    #footer .container .row .list h5{
+        text-align: center;
+    }
+    #footer .container .row .list ul li{
+        text-align: center;
+    }
+
+    
+
+
+}
+
+@media(max-width:480px){
+ 
+    #header .row{
+        display: block;
+    height: 32vw;
+    }
+    #header .user_section{
+        left: 5%;
+        top: 53%;
+    }
+    #header .btn{
+        left: 85.5%;
+        top: 60%;
+        height: 36%;
+        PADDING: 0px 6px;
+    }
+    #header input[value='checkbox']{
+        left: 87%;
+        top: 46%;
+    }
+    #main_nav ul{
+        height: 85%;
+    }
+    #header .container #main_nav ul li{
+    margin: 0px 10px 10px;
+    }
+    #banner .container_b .row .slide figcaption span{
+        font-size: 18px;
+    }
+    #about{
+        padding: 64px 0px 70px 0px;
+    }
+    #about .container h2{
+        font-size: 37px;
+    }
+    #about .container .row .image img{
+        height: 73vw;
+    }
+    #about .container .row .desc{
+        margin: 3% 4% 0% 3%;
+    }
+    #about .container .row .desc h3 span {
+        font-size: 23px;
+    }
+    #about .container .row .desc h3 {
+        font-size: 15px;
+    }
+    #about .container .row .read {
+        left: 11%;
+    }
+    #pricing .container h3{
+        font-size: 37px;
+    }
+    #pricing .container .row .col{
+        width: 74%;
+        margin: 16% auto;
+    }
+    #pricing .container .row .col .image .caption_2{
+        left: 115px;
+    }
+    #team .container h3{
+        font-size: 37px;
+    }
+    #team .container .row .desc p{
+        margin: 0% 7%;
+    }
+    #team .container .row .desc h4{
+        font-size: 30px;
+        margin-left: 7%;
+    }
+    #team .container .row .section .side{
+        display: block;
+    }
+    #team .container .row .section .side .image{
+        width: 68%;
+        height: 80vw;
+    }
+    #team .container .row .section .side .image img {
+        width: 100%;
+        height: 72vw;
+    }
+
+}
+
+@media(max-width:360px){
+    #header .row{
+        height: 37vw;
+    }
+    #header .container #main_nav ul{
+    background-color: rgba(0,0,0,0.9);
+    }
+    #banner .container_b .row .slide figcaption span{
+        font-size: 17px;
+    }
+    #about .container h2{
+        font-size: 34px;
+    }
+    #about .container .row .image img {
+        height: 90vw;
+    }
+    #about .container .row .desc h3 span {
+        font-size: 21px;
+    }
+    #about .container .row .desc h3 {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    #about .container .row .desc p{
+        line-height: 24px;
+    }
+    #about .container .row .read {
+        left: 7%;
+    }
+    #services .container h3{
+        font-size: 37px;
+    }
+    #services .container h3:after {
+        left: 39%;
+        width: 25%;
+    }
+    #services .container .row .service p {
+        line-height: 20px;
+    }
+    #pricing .container h3 {
+        font-size: 33px;
+    }
+    #pricing .container .row .col {
+        width: 79%;
+    }
+    #pricing .container .row .col .image .caption_2 {
+        left: 107px;
+    }
+    #gallery .container .row .image img {
+        height: 55vw;
+    }
+    #gallery .container .row .image {
+        width: 87%;
+    }
+    #gallery .container h3{
+        font-size: 39px;
+    }
+    #gallery .container h3:after {
+        left: 38%;
+        width: 24%;
+    }
+    #team .container h3 {
+        font-size: 30px;
+    }
+    #team .container .row .desc h4 {
+        font-size: 21px;
+    }
+    #team .container .row .section .side .image {
+        width: 75%;
+        height: 86vw;
+    }
+    #team .container .row .section .side .image img {
+        height: 79vw;
+    }
+    #contact .container h3{
+        font-size: 34px;
+    }
+    #contact .container h3:after {
+        left: 31%;
+        width: 36%;
+    }
+    #contact .container .row .form input{
+        font-size: 15px;
+    }
+    
+    
+
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+}
+
+
+
+
+
+
+
+
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
